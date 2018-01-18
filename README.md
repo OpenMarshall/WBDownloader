@@ -5,8 +5,7 @@
 - 可以输入某一条视频的微博地址，进行抓取
 - 抓取到的视频可以直接下载并保存到系统相册
 
-![](ScreenShots0.jpg)
-![](ScreenShots1.jpg)
+<img src="ScreenShots0.jpg" width="300"><img src="ScreenShots1.jpg" width="300">
 
 ## 技术
 项目使用 Xcode 9 + Swift 4 构建，抓取原理很简单，从移动端微博 H5 的 HTML 中解析出视频地址即可，客户端使用 pod 依赖于以下第三方库：
