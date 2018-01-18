@@ -1,12 +1,47 @@
 PODS:
-  - SnapKit (3.2.0)
+  - Alamofire (4.5.1)
+  - FontAwesomeKit (2.2.1):
+    - FontAwesomeKit/Core (= 2.2.1)
+    - FontAwesomeKit/FontAwesome (= 2.2.1)
+    - FontAwesomeKit/FoundationIcons (= 2.2.1)
+    - FontAwesomeKit/IonIcons (= 2.2.1)
+    - FontAwesomeKit/Material (= 2.2.1)
+    - FontAwesomeKit/Octicons (= 2.2.1)
+    - FontAwesomeKit/Zocial (= 2.2.1)
+  - FontAwesomeKit/Core (2.2.1)
+  - FontAwesomeKit/FontAwesome (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Material (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Octicons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.2.1):
+    - FontAwesomeKit/Core
+  - HGCircularSlider (2.0.0)
+  - MJRefresh (3.1.15)
+  - Shimmer (1.0.2)
+  - SnapKit (4.0.0)
 
 DEPENDENCIES:
-  - SnapKit (~> 3.2.0)
+  - Alamofire (~> 4.5)
+  - FontAwesomeKit (~> 2.2.0)
+  - HGCircularSlider (~> 2.0.0)
+  - MJRefresh
+  - Shimmer
+  - SnapKit (~> 4.0.0)
 
 SPEC CHECKSUMS:
-  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
+  HGCircularSlider: 92e2ee098c814709f455b8f46cd9008147f6a869
+  MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: a5afbddbaca7e052f8480001f9181a4ebaa4af72
+PODFILE CHECKSUM: d576c683ad3526b49c4632598be68fc2f5f05b6b
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.2.1

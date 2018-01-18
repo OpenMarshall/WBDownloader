@@ -2,5 +2,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'wbdownloader' do
-	pod 'SnapKit', '~> 3.2.0'
+	pod 'SnapKit', '~> 4.0.0'
+	pod 'HGCircularSlider', '~> 2.0.0'
+	pod 'Shimmer'
+	pod 'FontAwesomeKit', '~> 2.2.0'
+	pod 'MJRefresh'
+	pod 'Alamofire', '~> 4.5'
 end

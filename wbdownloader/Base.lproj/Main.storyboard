@@ -1,26 +1,137 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="wbdownloader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqz-7Q-NI5">
+                                <rect key="frame" x="115" y="270.5" width="205" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="tintColor" red="0.58715379238128662" green="0.030138561502099037" blue="0.18835785984992981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="抓取微博视频"/>
+                                <connections>
+                                    <action selector="parse" destination="BYZ-38-t0r" eventType="touchUpInside" id="WXQ-sZ-QMY"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入某条微博或某博主首页地址" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="wmj-9p-2BS">
+                                <rect key="frame" x="0.0" y="223.5" width="320" height="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWX-c9-Xp6">
+                                <rect key="frame" x="0.0" y="270.5" width="115" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="tintColor" red="0.58715379238128662" green="0.030138561502099037" blue="0.18835785984992981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="放弃"/>
+                                <connections>
+                                    <action selector="stopParse" destination="BYZ-38-t0r" eventType="touchUpInside" id="a8a-nL-AmI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIZ-D9-G5S">
+                                <rect key="frame" x="270" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sLc-Il-h1L"/>
+                                    <constraint firstAttribute="width" constant="50" id="uCs-ME-I5L"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87833553549999999" green="0.87848657370000005" blue="0.8783260584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wmj-9p-2BS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="13z-vN-T15"/>
+                            <constraint firstAttribute="trailing" secondItem="wmj-9p-2BS" secondAttribute="trailing" id="9zt-Yx-hBA"/>
+                            <constraint firstItem="KWX-c9-Xp6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UQH-ey-Dkk"/>
+                            <constraint firstItem="NIZ-D9-G5S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="WYp-bu-YgR"/>
+                            <constraint firstItem="KWX-c9-Xp6" firstAttribute="centerY" secondItem="Kqz-7Q-NI5" secondAttribute="centerY" id="fEP-An-4O4"/>
+                            <constraint firstItem="Kqz-7Q-NI5" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" multiplier="0.55" id="fPZ-Y9-dnc"/>
+                            <constraint firstItem="Kqz-7Q-NI5" firstAttribute="leading" secondItem="KWX-c9-Xp6" secondAttribute="trailing" id="rjX-zL-JIq"/>
+                            <constraint firstItem="KWX-c9-Xp6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.36" id="rok-rA-U6C"/>
+                            <constraint firstItem="NIZ-D9-G5S" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="tT6-2g-QeD"/>
+                            <constraint firstAttribute="trailing" secondItem="Kqz-7Q-NI5" secondAttribute="trailing" id="v0t-RN-1F7"/>
+                            <constraint firstItem="Kqz-7Q-NI5" firstAttribute="top" secondItem="wmj-9p-2BS" secondAttribute="bottom" constant="20" id="z9h-Aj-75G"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moreBtn" destination="NIZ-D9-G5S" id="3pu-AR-j4Z"/>
+                        <outlet property="parseBtn" destination="Kqz-7Q-NI5" id="e0T-A5-cdE"/>
+                        <outlet property="stopParseBtn" destination="KWX-c9-Xp6" id="R1u-3v-yvB"/>
+                        <outlet property="tf" destination="wmj-9p-2BS" id="TuP-V8-uJc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="459.375" y="50.70422535211268"/>
+        </scene>
+        <!--Video TableVC-->
+        <scene sceneID="Lfv-SO-8KG">
+            <objects>
+                <tableViewController storyboardIdentifier="VideoTableVC" id="Y2S-Dh-P8U" customClass="VideoTableVC" customModule="wbdownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="no8-tA-sjH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="videoCell" rowHeight="150" id="8mM-0n-4eT" customClass="VideoCell" customModule="wbdownloader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8mM-0n-4eT" id="C9b-KN-Zcz">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Y2S-Dh-P8U" id="l8Z-0e-i6g"/>
+                            <outlet property="delegate" destination="Y2S-Dh-P8U" id="hZJ-s8-esA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="kkW-qx-Upm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Mml-56-28A">
+                            <connections>
+                                <action selector="dismiss:" destination="Y2S-Dh-P8U" id="ZDt-TD-oqo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VFs-KR-rkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869.375" y="50.70422535211268"/>
+        </scene>
+        <!--NaviVC-->
+        <scene sceneID="klh-EA-Md9">
+            <objects>
+                <navigationController storyboardIdentifier="navi" automaticallyAdjustsScrollViewInsets="NO" id="hye-OD-TiV" customClass="NaviVC" customModule="wbdownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kuD-9g-mVf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y2S-Dh-P8U" kind="relationship" relationship="rootViewController" id="1Cg-6u-zYJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQN-Ol-FGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1140" y="51"/>
         </scene>
     </scenes>
 </document>
